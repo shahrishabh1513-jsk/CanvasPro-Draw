@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Studio Pro · Ultimate Drawing App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-paintbrush"></i>
+                </div>
+                <span class="logo-text">canvas<span>pro</span></span>
+            </div>
+
+            <div class="tool-group">
+                <div class="group-title">
+                    <i class="fas fa-crown"></i>
+                    <span>premium tools</span>
+                </div>
+                <div class="tools-grid">
+                    <button id="tool-brush" class="tool-btn active-tool" data-tooltip="Brush (B)">
+                        <i class="fas fa-paint-brush"></i>
+                    </button>
+                    <button id="tool-shapes" class="tool-btn" data-tooltip="Shapes (S)">
+                        <i class="fas fa-shapes"></i>
+                    </button>
+                    <button id="tool-text" class="tool-btn" data-tooltip="Text (T)">
+                        <i class="fas fa-font"></i>
+                    </button>
+                    <button id="tool-eraser" class="tool-btn" data-tooltip="Eraser (E)">
+                        <i class="fas fa-eraser"></i>
+                    </button>
+                    <button id="tool-fill" class="tool-btn" data-tooltip="Fill (F)">
+                        <i class="fas fa-fill-drip"></i>
+                    </button>
+                    <button id="tool-gradient" class="tool-btn" data-tooltip="Gradient (G)">
+                        <i class="fas fa-chart-line"></i>
+                    </button>
+                    <button id="tool-spray" class="tool-btn" data-tooltip="Spray (A)">
+                        <i class="fas fa-spray-can"></i>
+                    </button>
+                    <button id="tool-blur" class="tool-btn" data-tooltip="Blur (U)">
+                        <i class="fas fa-tint"></i>
+                    </button>
+                    <button id="tool-select" class="tool-btn" data-tooltip="Select (V)">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <div class="group-title">
+                    <i class="fas fa-brush"></i>
+                    <span>brush studio</span>
+                </div>
+                <div class="brushes-grid">
+                    <button id="brush-round" class="brush-btn active-brush" data-tooltip="Round soft">
+                        <i class="fas fa-circle"></i>
+                    </button>
+                    <button id="brush-square" class="brush-btn" data-tooltip="Square hard">
+                        <i class="fas fa-square"></i>
+                    </button>
+                    <button id="brush-air" class="brush-btn" data-tooltip="Airbrush">
+                        <i class="fas fa-cloud"></i>
+                    </button>
+                    <button id="brush-calligraphy" class="brush-btn" data-tooltip="Calligraphy">
+                        <i class="fas fa-pen-fancy"></i>
+                    </button>
+                    <button id="brush-sparkle" class="brush-btn" data-tooltip="Sparkle">
+                        <i class="fas fa-star"></i>
+                    </button>
+                    <button id="brush-charcoal" class="brush-btn" data-tooltip="Charcoal">
+                        <i class="fas fa-leaf"></i>
+                    </button>
+                </div>
+                <div class="size-control">
+                    <button id="decrease" class="icon-btn"><i class="fas fa-minus"></i></button>
+                    <div class="size-display">
+                        <span id="size" class="size-value">10</span>
+                        <span class="size-label">px</span>
+                    </div>
+                    <button id="increase" class="icon-btn"><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="opacity-control">
+                    <label>opacity</label>
+                    <input type="range" id="opacity" min="0" max="100" value="100">
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <div class="group-title">
+                    <i class="fas fa-shapes"></i>
+                    <span>shape library</span>
+                </div>
+                <div class="shape-grid">
+                    <button id="shape-rect" class="shape-btn active-shape" data-tooltip="Rectangle">
+                        <i class="fas fa-square"></i>
+                    </button>
+                    <button id="shape-circle" class="shape-btn" data-tooltip="Circle">
+                        <i class="fas fa-circle"></i>
+                    </button>
+                    <button id="shape-line" class="shape-btn" data-tooltip="Line">
+                        <i class="fas fa-slash"></i>
+                    </button>
+                    <button id="shape-triangle" class="shape-btn" data-tooltip="Triangle">
+                        <i class="fas fa-play" style="transform: rotate(90deg);"></i>
+                    </button>
+                    <button id="shape-arrow" class="shape-btn" data-tooltip="Arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button id="shape-star" class="shape-btn" data-tooltip="Star">
+                        <i class="fas fa-star"></i>
+                    </button>
+                    <button id="shape-heart" class="shape-btn" data-tooltip="Heart">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button id="shape-hexagon" class="shape-btn" data-tooltip="Hexagon">
+                        <i class="fas fa-hexagon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <div class="group-title">
+                    <i class="fas fa-palette"></i>
+                    <span>color studio</span>
+                </div>
+                <div class="color-section">
+                    <div class="color-picker-wrap">
+                        <input type="color" id="color" value="#4361ee">
+                        <span class="color-hex" id="colorHex">#4361ee</span>
+                    </div>
+                    <div class="swatches">
+                        <button class="swatch" style="background: #000000;"></button>
+                        <button class="swatch" style="background: #ffffff;"></button>
+                        <button class="swatch" style="background: #ff0000;"></button>
+                        <button class="swatch" style="background: #00ff00;"></button>
+                        <button class="swatch" style="background: #0000ff;"></button>
+                        <button class="swatch" style="background: #ffff00;"></button>
+                        <button class="swatch" style="background: #ff00ff;"></button>
+                        <button class="swatch" style="background: #00ffff;"></button>
+                        <button class="swatch" style="background: #4361ee;"></button>
+                        <button class="swatch" style="background: #f72585;"></button>
+                        <button class="swatch" style="background: #7209b7;"></button>
+                        <button class="swatch" style="background: #4cc9f0;"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <div class="group-title">
+                    <i class="fas fa-robot"></i>
+                    <span>copilot ai</span>
+                </div>
+                <div class="copilot-section">
+                    <button id="copilot-enhance" class="action-btn">
+                        <i class="fas fa-magic"></i> enhance drawing
+                    </button>
+                    <button id="copilot-smooth" class="action-btn">
+                        <i class="fas fa-wind"></i> smooth edges
+                    </button>
+                    <button id="copilot-sharpen" class="action-btn">
+                        <i class="fas fa-bolt"></i> sharpen
+                    </button>
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <div class="group-title">
+                    <i class="fas fa-layer-group"></i>
+                    <span>layers pro</span>
+                </div>
+                <div class="layers-section">
+                    <button id="layer-new" class="action-btn">
+                        <i class="fas fa-plus"></i> new layer
+                    </button>
+                    <button id="layer-duplicate" class="action-btn">
+                        <i class="fas fa-copy"></i> duplicate
+                    </button>
+                    <button id="layer-merge" class="action-btn">
+                        <i class="fas fa-compress-alt"></i> merge down
+                    </button>
+                    <button id="layer-clear" class="action-btn">
+                        <i class="fas fa-trash"></i> clear layer
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="canvas-area">
+            <div class="canvas-wrapper">
+                <canvas id="canvas" width="1000" height="700"></canvas>
+                <div class="canvas-overlay" id="canvasOverlay"></div>
+            </div>
+            
+            <footer class="app-footer">
+                <div class="footer-left">
+                    <div class="status-indicator"></div>
+                    <span id="statusText">ready to draw</span>
+                    <span class="separator">|</span>
+                    <span id="cursorPos">0, 0</span>
+                </div>
+                <div class="footer-center">
+                    <button id="undoBtn" class="footer-btn" data-tooltip="Undo (Ctrl+Z)">
+                        <i class="fas fa-undo-alt"></i>
+                    </button>
+                    <button id="redoBtn" class="footer-btn" data-tooltip="Redo (Ctrl+Y)">
+                        <i class="fas fa-redo-alt"></i>
+                    </button>
+                    <span class="separator">|</span>
+                    <button id="zoomOut" class="footer-btn"><i class="fas fa-search-minus"></i></button>
+                    <span id="zoomLevel">100%</span>
+                    <button id="zoomIn" class="footer-btn"><i class="fas fa-search-plus"></i></button>
+                    <span class="separator">|</span>
+                    <button id="gridToggle" class="footer-btn" data-tooltip="Toggle Grid">
+                        <i class="fas fa-border-all"></i>
+                    </button>
+                </div>
+                <div class="footer-right">
+                    <button id="clear" class="footer-btn danger" data-tooltip="Clear All">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button id="saveBtn" class="footer-btn success" data-tooltip="Save PNG">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button id="shareBtn" class="footer-btn" data-tooltip="Share">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
