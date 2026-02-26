@@ -1,10 +1,4 @@
 # 🎨 CanvasPro Draw – Advanced Web Drawing Application
-
-<p align="center">
-  <img src="https://img.shields.io/badge/CanvasPro-Draw-4361ee?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Version-1.0-black?style=for-the-badge"/>
-</p>
-
 ---
 
 ## 🌐 Live Demo
@@ -87,14 +81,33 @@ Built completely from scratch without any frameworks.
 
 ## 🛠️ Tech Stack
 
-<p>
+<p align="center">>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
   <img src="https://img.shields.io/badge/Canvas_API-black?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/CanvasPro-Draw-4361ee?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Version-1.0-black?style=for-the-badge"/>
 </p>
 
+
 ---
+
+## 🏷️ Tags
+
+<p>
+  <img src="https://img.shields.io/badge/html5-orange?logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/css3-blue?logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/javascript-yellow?logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/html5--canvas-black?logo=html5"/>
+  <img src="https://img.shields.io/badge/drawing--app-purple"/>
+  <img src="https://img.shields.io/badge/creative--coding-pink"/>
+  <img src="https://img.shields.io/badge/web--editor-darkgreen"/>
+  <img src="https://img.shields.io/badge/frontend--project-lightgrey"/>
+  <img src="https://img.shields.io/badge/ui--design-blueviolet"/>
+</p>
+
+```
 
 ## 🏗️ Project Structure
 
@@ -145,13 +158,5 @@ Example:
 
 ---
 
-## 👨‍💻 Author
-
-**Rishabh Shah**  
-Frontend Developer | Creative UI Engineer  
-
-Passionate about building interactive and modern web experiences.
-
----
-
 ⭐ If you like this project, consider giving it a star!
+
