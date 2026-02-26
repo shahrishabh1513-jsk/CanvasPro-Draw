@@ -1,10 +1,5 @@
 # 🎨 CanvasPro Draw – Advanced Web Drawing Application
 
-
-  <img src="https://img.shields.io/badge/CanvasPro-Draw-4361ee?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Version-1.0-black?style=for-the-badge"/>
-</p>
-
 ---
 
 ## 🌐 Live Demo
@@ -147,3 +142,4 @@ Example:
 ---
 
 ⭐ If you like this project, consider giving it a star!
+
