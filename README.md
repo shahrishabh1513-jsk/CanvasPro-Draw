@@ -4,7 +4,7 @@
 
 ## 🌐 Live Demo
 
-(Add your GitHub Pages link here)
+👉 https://shahrishabh1513-jsk.github.io/CanvasPro-Draw/
 
 ---
 
@@ -142,4 +142,5 @@ Example:
 ---
 
 ⭐ If you like this project, consider giving it a star!
+
 
